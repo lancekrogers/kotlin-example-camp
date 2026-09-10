@@ -1,0 +1,3 @@
+[submodule "projects/kotlin-ktor-realworld-example-app"]
+	path = projects/kotlin-ktor-realworld-example-app
+	url = git@github.com:lancekrogers/kotlin-ktor-realworld-example-app.git
