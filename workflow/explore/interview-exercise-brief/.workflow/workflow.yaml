@@ -1,0 +1,11 @@
+version: 1
+kind: workflow-runtime
+workflow_id: wf-interview-exercise-brief
+doc_path: WORKFLOW.md
+doc_hash: sha256:f12024b06b64a9308b3a4b7888180300fcb1833f094c054878ccbd03b9f5997c
+active_run_id: run-20260910T154554Z
+runs:
+    - run_id: run-20260910T154554Z
+      status: active
+      path: runs/run-20260910T154554Z
+      started_at: "2026-09-10T15:45:54Z"

@@ -1,0 +1,11 @@
+version: v1alpha9
+kind: workitem
+id: explore-interview-exercise-brief-2026-09-10
+type: explore
+title: Explore the FDE interview exercise brief
+ref: WI-da13e4
+tags:
+    - interview
+    - brief
+projects:
+    - projects/kotlin-ktor-realworld-example-app

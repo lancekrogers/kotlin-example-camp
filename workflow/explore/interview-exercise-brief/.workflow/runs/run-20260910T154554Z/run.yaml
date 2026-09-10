@@ -1,0 +1,16 @@
+version: 1
+kind: workflow-run
+run_id: run-20260910T154554Z
+workflow_id: wf-interview-exercise-brief
+status: active
+started_at: 2026-09-10T15:45:54.262742Z
+executor: fest
+source:
+    workflow_path: ../../WORKFLOW.md
+    workflow_hash: sha256:f12024b06b64a9308b3a4b7888180300fcb1833f094c054878ccbd03b9f5997c
+    workitem_path: ../..
+summary:
+    current_step: 0
+    total_steps: 4
+    completed_steps: 0
+    blocked: false

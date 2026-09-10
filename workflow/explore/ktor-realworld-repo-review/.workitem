@@ -1,0 +1,12 @@
+version: v1alpha9
+kind: workitem
+id: explore-ktor-realworld-repo-review-2026-09-10
+type: explore
+title: Document the ask and the kotlin-ktor-realworld codebase
+ref: WI-5205b8
+tags:
+    - interview
+    - codebase
+    - security
+projects:
+    - projects/kotlin-ktor-realworld-example-app
