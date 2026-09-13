@@ -52,10 +52,20 @@ Stated plainly, because a no-execution audit has real limits:
 
 ## Decision
 
-- **Status:** pending — awaiting Lance
-- **Decided by:**
-- **Date:**
-- **Notes:**
+- **Status:** **GO — containerized**
+- **Decided by:** Lance
+- **Date:** 2026-09-10
+- **Notes:** Proceed on the basis that no malicious code was found on any surface examined. All
+  builds, tests, and runs happen **inside Docker**, not on the host. The build-hygiene change
+  above is applied before the first dependency is ever fetched, so the configuration-phase
+  vectors (A1/A2/A3) are closed before Gradle resolves anything.
 
-Steps 3 (document the ask) and 4 (document the repository) of this workitem are blocked until
-this is recorded.
+  Scope of remediation approved alongside this decision: **full security remediation** — the
+  build-hygiene fixes, the forced Gradle upgrade, the three blocking correctness defects
+  (B5/B6/B8), and the application security work (B1 secret to config, B2/B3 bcrypt, B4 response
+  DTO, B7 drop the H2 Postgres listener).
+
+  The containerized decision also downgrades the practical impact of A6/A7 (the spec-api script's
+  remote default and unpinned `npx newman`): run inside a container, neither reaches the host.
+
+Steps 3 (document the ask) and 4 (document the repository) are unblocked.

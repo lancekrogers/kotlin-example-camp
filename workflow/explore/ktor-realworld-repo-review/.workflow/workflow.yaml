@@ -3,9 +3,14 @@ kind: workflow-runtime
 workflow_id: wf-ktor-realworld-repo-review
 doc_path: WORKFLOW.md
 doc_hash: sha256:3889e1f535f1a3569a24d4fcc3ebda741b3668c7d6b83043e24c959445babb0b
-active_run_id: run-20260910T154617Z
+active_run_id: run-20260910T163211Z
 runs:
     - run_id: run-20260910T154617Z
-      status: active
+      status: completed
       path: runs/run-20260910T154617Z
       started_at: "2026-09-10T15:46:17Z"
+      ended_at: "2026-09-10T16:32:04Z"
+    - run_id: run-20260910T163211Z
+      status: active
+      path: runs/run-20260910T163211Z
+      started_at: "2026-09-10T16:32:11Z"

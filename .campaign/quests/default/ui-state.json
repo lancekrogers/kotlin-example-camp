@@ -1,0 +1,54 @@
+{
+  "version": 2,
+  "updatedAt": "2026-09-12T21:12:10.667Z",
+  "activeWorkspaceTabId": "workspace-tab-1",
+  "workspaceTabs": [
+    {
+      "id": "workspace-tab-1",
+      "title": "Tab 1",
+      "paneTree": {
+        "children": [
+          {
+            "content": {
+              "filePath": "/Users/lancerogers/campaigns/amex/README.md",
+              "type": "file"
+            },
+            "id": "pane-37",
+            "type": "pane"
+          },
+          {
+            "content": {
+              "type": "terminal"
+            },
+            "id": "pane-53",
+            "type": "pane"
+          }
+        ],
+        "direction": "vertical",
+        "id": "split-54",
+        "sizes": [
+          50,
+          50
+        ],
+        "type": "split"
+      },
+      "openFiles": [
+        {
+          "path": "/Users/lancerogers/campaigns/amex/CLAUDE.md",
+          "name": "CLAUDE.md"
+        },
+        {
+          "path": "/Users/lancerogers/campaigns/amex/README.md",
+          "name": "README.md"
+        }
+      ],
+      "currentPath": "/Users/lancerogers/campaigns/amex/README.md",
+      "activePaneId": "pane-53",
+      "chainConfig": {
+        "enabled": false,
+        "leftSessionId": null,
+        "rightSessionId": null
+      }
+    }
+  ]
+}

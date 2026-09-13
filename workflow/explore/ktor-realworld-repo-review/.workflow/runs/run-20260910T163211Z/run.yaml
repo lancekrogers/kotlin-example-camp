@@ -1,16 +1,16 @@
 version: 1
 kind: workflow-run
-run_id: run-20260910T154617Z
+run_id: run-20260910T163211Z
 workflow_id: wf-ktor-realworld-repo-review
 status: active
-started_at: 2026-09-10T15:46:17.817807Z
+started_at: 2026-09-10T16:32:11.79748Z
 executor: fest
 source:
     workflow_path: ../../WORKFLOW.md
     workflow_hash: sha256:3889e1f535f1a3569a24d4fcc3ebda741b3668c7d6b83043e24c959445babb0b
     workitem_path: ../..
 summary:
-    current_step: 3
+    current_step: 2
     total_steps: 4
-    completed_steps: 3
+    completed_steps: 2
     blocked: false

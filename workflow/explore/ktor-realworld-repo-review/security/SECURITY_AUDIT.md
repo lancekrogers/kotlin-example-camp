@@ -33,6 +33,9 @@ supply-chain vector before the first dependency is ever fetched.
 
 ## Findings summary
 
+> **Remediation applied 2026-09-10** — see [REMEDIATION.md](REMEDIATION.md) for per-finding
+> status, what was verified by execution, and what was deliberately deferred.
+
 | ID | Sev | Finding |
 |----|-----|---------|
 | [A1](findings-supply-chain.md#a1) | Medium | `jcenter()` — decommissioned repo in the resolution chain |
