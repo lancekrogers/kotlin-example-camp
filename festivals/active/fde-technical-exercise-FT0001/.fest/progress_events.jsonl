@@ -91,3 +91,5 @@
 {"ts":"2026-09-15T20:31:55.692177Z","event":"wf_judge_claimed","phase":"gate:002_PLAN","step":3,"judge_pid":92842,"judge_run_id":"07c9c293e67662e115952d39d256ab5d"}
 {"ts":"2026-09-15T20:32:06.628617Z","event":"wf_judge_returned","phase":"gate:002_PLAN","step":3,"judge_status":"canceled","judge_detail":"superseded by manual approval","judge_run_id":"07c9c293e67662e115952d39d256ab5d"}
 {"ts":"2026-09-15T20:32:06.628622Z","event":"wf_step_done","phase":"gate:002_PLAN","step":3,"decision_actor":"user"}
+{"ts":"2026-09-15T20:33:24.264228Z","event":"wf_hook_run","phase":"gate:002_PLAN","step":3,"hook_name":"approval_judge","hook_layer":"festivals","hook_timing":"post","hook_verb":"gate_approve","hook_outcome":"pass","hook_duration_ms":88556,"hook_fail":"closed"}
+{"ts":"2026-09-15T20:51:21.427133Z","event":"blocked","task":"003_IMPLEMENT/01_ci_pipeline/01_diagnose_zero_ci_runs.md","reason":"No signed-in view of the fork's Actions tab is reachable (Chrome extension not connected; pinchtab signed out). Cause is being established empirically by task 03's probe PR; see results/01_zero_ci_runs.md."}
