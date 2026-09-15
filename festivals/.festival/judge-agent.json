@@ -1,0 +1,3 @@
+{
+  "agent": "claude --print --output-format json --json-schema {\"type\":\"object\",\"required\":[\"decision\",\"reason\"],\"properties\":{\"schema_version\":{\"type\":\"string\"},\"decision\":{\"type\":\"string\",\"enum\":[\"approve\",\"reject\"]},\"reason\":{\"type\":\"string\",\"minLength\":1},\"confidence\":{\"type\":\"number\"},\"followups\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}},\"evidence_status\":{\"type\":\"string\",\"enum\":[\"none\",\"insufficient\",\"ok\"]}}} --add-dir {campaign_root} --add-dir {festival_path} --add-dir {phase_path} --allowedTools Read,Grep,Glob,LS --dangerously-skip-permissions --settings {\"verbose\":false} {prompt}"
+}

@@ -6,11 +6,15 @@ agent:
   block_on_errors: false
   require_auto_commit: false
 
-# hooks:
-#   definitions:
-#     approval_judge:
-#       # Command run by 'fest workflow judge'. It receives the approval
-#       # request as JSON on stdin and must print a JSON verdict on stdout
-#       # (schema fest.approval.judge/v1). Any tool works; 'ob judge' is one example.
-#       command: ob judge
-#       timeout: 0
+hooks:
+  definitions:
+    approval_judge:
+      # Command run by 'fest workflow judge'. It receives the approval
+      # request as JSON on stdin and must print a JSON verdict on stdout
+      # (schema fest.approval.judge/v1). judge-agent wraps a headless CLI agent.
+      # The agent command lives in judge-agent.json beside this file: it is the
+      # claude preset plus --settings {"verbose":false}, because verbose output
+      # breaks judge-agent's JSON parsing. --agent must not be passed here, since
+      # a flag takes precedence over the config file.
+      command: judge-agent --config /Users/lancerogers/campaigns/amex/festivals/.festival/judge-agent.json
+      timeout: 0

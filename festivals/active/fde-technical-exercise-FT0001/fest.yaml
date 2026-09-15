@@ -1,0 +1,61 @@
+version: "1.0"
+metadata:
+  id: FT0001
+  uuid: 0a99cb32-a6a1-49c6-9910-b274c7a75314
+  name: fde-technical-exercise
+  goal: Ship all three of the brief's named features (Article Search, Popular Articles, User Activity) into the forked kotlin-ktor-realworld-example-app as green, merged slices, with the tests, JDK 17/21 CI, work log, and walkthrough the FDE exercise brief asks for, leaving the fork submission-ready
+  festival_type: standard
+  created_at: 2026-09-13T19:15:04.903422Z
+  initial_size_bytes: 45044
+  status_history:
+    - status: planning
+      timestamp: 2026-09-13T19:15:04.903422Z
+      path: festivals/planning/fde-technical-exercise-FT0001
+      notes: Festival created
+    - status: ready
+      timestamp: 2026-09-15T12:11:15.753092-06:00
+      path: festivals/ready/fde-technical-exercise-FT0001
+    - status: active
+      timestamp: 2026-09-15T12:47:04.678853-06:00
+      path: festivals/active/fde-technical-exercise-FT0001
+project_path: projects/kotlin-ktor-realworld-example-app
+type_config:
+  auto_phases:
+    - INGEST
+    - PLAN
+  pending_phases:
+    - name: IMPLEMENT
+      type: implementation
+    - name: POLISH
+      type: planning
+quality_gates:
+  enabled: true
+  auto_append: true
+  implementation:
+    - id: testing
+      template: gates/implementation/QUALITY_GATE_TESTING
+      name: Testing and Verification
+      enabled: true
+    - id: review
+      template: gates/implementation/QUALITY_GATE_REVIEW
+      name: Code Review
+      enabled: true
+    - id: iterate
+      template: gates/implementation/QUALITY_GATE_ITERATE
+      name: Review Results and Iterate
+      enabled: true
+    - id: fest-commit
+      template: gates/implementation/QUALITY_GATE_FEST_COMMIT
+      name: Fest Commit Changes
+      enabled: true
+excluded_patterns:
+  - '*_planning'
+  - '*_research'
+  - '*_requirements'
+  - '*_docs'
+templates:
+  task_default: tasks/SIMPLE
+  prefer_simple: true
+tracking:
+  enabled: true
+  checksum_file: .festival-checksums.json

@@ -1,0 +1,12 @@
+[
+  {
+    "timestamp": "2026-09-15T12:11:15.737918-06:00",
+    "from_status": "planning",
+    "to_status": "ready"
+  },
+  {
+    "timestamp": "2026-09-15T12:47:04.659802-06:00",
+    "from_status": "ready",
+    "to_status": "active"
+  }
+]

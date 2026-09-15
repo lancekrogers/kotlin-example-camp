@@ -1,2 +1,3 @@
 # Git worktrees (machine-local)
 /projects/worktrees/
+.DS_Store*
