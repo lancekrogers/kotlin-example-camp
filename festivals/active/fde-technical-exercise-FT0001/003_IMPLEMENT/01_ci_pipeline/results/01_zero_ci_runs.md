@@ -53,9 +53,57 @@ diagnosis moves to an empirical test: task 03's probe PR is the first push and P
 
 ## Cause
 
-Undetermined as of 2026-09-15T20:55Z. Ruled out: Actions disabled for the repository (`enabled: true`), a
-disabled workflow (`state: active`), and restricted allowed actions (`allowed_actions: all`).
+**`unknown`, narrowed** (2026-09-15T21:00Z). Workflows run on the fork now (see Confirmation) with no settings
+change, so the problem does not persist. The cause of the earlier zero runs is not proven.
+
+**What differed.** PR #1 (`security/audit-remediation` → `master`, opened 2026-09-13T17:23:15Z, merged 19:10:36Z
+as `bf1435e`) changed 30 files, none under `.github/`. Both its `pull_request` event and the merge push ran the
+workflow file unchanged since `134bd8e` (2023-10-31, "Add github action"), and neither produced a run. PR #2 is
+the fork's first push that changes `.github/workflows/gradle.yml`, and its run started 3 seconds after the PR
+opened.
+
+```text
+$ gh api repos/$R/pulls/1 --jq '{created_at, merged_at, base: .base.ref, head: .head.label, merge_commit_sha}'
+{"base":"master","created_at":"2026-09-13T17:23:15Z","head":"lancekrogers:security/audit-remediation","merge_commit_sha":"bf1435e0a20c2f0cc79836fabcd8dae1408e8222","merged_at":"2026-09-13T19:10:36Z"}
+$ gh api repos/$R/pulls/1/files --paginate --jq '.[] | "\(.status) \(.filename)"' | wc -l
+30
+$ ... | grep -F ' .github/'
+(no .github/ paths among PR #1 files)
+$ git log --format='%h %ad %s' --date=iso-strict -3 master -- .github/workflows/gradle.yml
+134bd8e 2023-10-31T20:38:10-03:00 Add github action
+```
+
+**Ruled out:**
+- Actions disabled for the repository (`enabled: true`)
+- a disabled workflow (`state: active`)
+- restricted actions (`allowed_actions: all`)
+- a permanent per-fork opt-in that needs a click: runs started without one
+
+**Unverified candidate.** GitHub may hold workflows inherited from the parent on a fork until the fork changes
+its own workflow files. The GitHub page cited above does not document this, so it stays a hypothesis. The
+user may also have opened the Actions tab during this session, which this record cannot rule out.
+
+**Consequence for the plan.** None. Every later slice's PR runs the new workflow, and task 03's run shows
+checks are created on PRs to `master`.
 
 ## Confirmation
 
-To be filled by task 03 with the URL of the first run on the fork.
+Workflows run on the fork. Task 03's probe PR produced the fork's first run within seconds:
+
+- **PR:** https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/pull/2, created 2026-09-15T20:53:18Z,
+  base `master`, head `ci/prove-red`
+- **Run:** https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35022352856, created
+  2026-09-15T20:53:21Z
+
+```text
+$ gh run list --repo $R --branch ci/prove-red --limit 5 --json databaseId,event,status,conclusion,url,createdAt
+[{"conclusion":"","createdAt":"2026-09-15T20:53:21Z","databaseId":35022352856,"event":"pull_request","status":"in_progress","url":"https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35022352856"}]
+$ gh api repos/$R/actions/runs --jq .total_count
+1
+$ gh pr checks 2 --repo $R
+build and test (JDK 17)	pending	0	https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35022352856/job/104560931611
+build and test (JDK 21)	pending	0	https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35022352856/job/104560931839
+```
+
+The agent changed no settings between the baseline and this run, so no per-fork opt-in click was needed.
+That refutes the leading hypothesis from planning.

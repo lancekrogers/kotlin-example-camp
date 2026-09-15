@@ -93,3 +93,10 @@
 {"ts":"2026-09-15T20:32:06.628622Z","event":"wf_step_done","phase":"gate:002_PLAN","step":3,"decision_actor":"user"}
 {"ts":"2026-09-15T20:33:24.264228Z","event":"wf_hook_run","phase":"gate:002_PLAN","step":3,"hook_name":"approval_judge","hook_layer":"festivals","hook_timing":"post","hook_verb":"gate_approve","hook_outcome":"pass","hook_duration_ms":88556,"hook_fail":"closed"}
 {"ts":"2026-09-15T20:51:21.427133Z","event":"blocked","task":"003_IMPLEMENT/01_ci_pipeline/01_diagnose_zero_ci_runs.md","reason":"No signed-in view of the fork's Actions tab is reachable (Chrome extension not connected; pinchtab signed out). Cause is being established empirically by task 03's probe PR; see results/01_zero_ci_runs.md."}
+{"ts":"2026-09-15T20:51:21.629918Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/02_replace_workflow_with_jdk_matrix.md"}
+{"ts":"2026-09-15T20:55:56.65767Z","event":"unblocked","task":"003_IMPLEMENT/01_ci_pipeline/01_diagnose_zero_ci_runs.md"}
+{"ts":"2026-09-15T20:57:50.267877Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/01_diagnose_zero_ci_runs.md"}
+{"ts":"2026-09-15T20:57:50.297313Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/03_prove_ci_fails_red.md"}
+{"ts":"2026-09-15T21:01:44.795313Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/04_testing.md"}
+{"ts":"2026-09-15T21:01:44.829741Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/05_review.md"}
+{"ts":"2026-09-15T21:02:34.740017Z","event":"completed","task":"003_IMPLEMENT/01_ci_pipeline/06_iterate.md"}

@@ -1,0 +1,189 @@
+# just gate on ci/jdk-matrix @ 9752fea, started 2026-09-15T21:01:12Z
+=== gate: supply-chain checks ===
+  ok    no jcenter()
+  ok    no mavenLocal()
+  ok    all versions pinned
+  ok    Gradle distribution checksum pinned
+=== gate: secret scan ===
+  ok    no hardcoded credentials in src/main
+=== gate: build on JDK 17 ===
+--- building on JDK 17 ---
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :compileTestKotlin FROM-CACHE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test FROM-CACHE
+> Task :check UP-TO-DATE
+> Task :build
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 9s
+10 actionable tasks: 7 executed, 3 from cache
+=== gate: build on JDK 21 ===
+--- building on JDK 21 ---
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :compileTestKotlin FROM-CACHE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test FROM-CACHE
+> Task :check UP-TO-DATE
+> Task :build
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 9s
+10 actionable tasks: 7 executed, 3 from cache
+=== gate: tests ===
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestKotlin FROM-CACHE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test FROM-CACHE
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3s
+5 actionable tasks: 1 executed, 3 from cache, 1 up-to-date
+=== gate: enabled-test census ===
+  ArticleControllerTest      ran=0   passed=0   failed=0   skipped=14  <-- entire class disabled
+  CommentControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  ProfileControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  TagControllerTest          ran=0   passed=0   failed=0   skipped=1  <-- entire class disabled
+  UserControllerTest         ran=4   passed=4   failed=0   skipped=0
+
+  TOTAL ran=4 passed=4 failed=0 skipped=21
+
+  WARNING: 21 test(s) skipped. A green build does not mean the application works.
+=== gate: runtime checks ===
+  container not running; starting it
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.5s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+#3 resolve docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32 0.0s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 DONE 0.3s
+
+#5 [internal] load metadata for docker.io/library/gradle:8.14-jdk17
+#5 DONE 0.3s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 167B done
+#6 DONE 0.0s
+
+#7 [internal] load build context
+#7 DONE 0.0s
+
+#8 [build 1/6] FROM docker.io/library/gradle:8.14-jdk17@sha256:0ca05650e107c76a8e97bdb98cc21e73b61dca3d3ca2648107fa6714d8aa53a7
+#8 resolve docker.io/library/gradle:8.14-jdk17@sha256:0ca05650e107c76a8e97bdb98cc21e73b61dca3d3ca2648107fa6714d8aa53a7 done
+#8 DONE 0.0s
+
+#9 [runtime 1/4] FROM docker.io/library/eclipse-temurin:17-jre@sha256:c6f2875c05ea10f16398bdc5f73405c384991506f2f1ead8bcc6582ae8adea79
+#9 resolve docker.io/library/eclipse-temurin:17-jre@sha256:c6f2875c05ea10f16398bdc5f73405c384991506f2f1ead8bcc6582ae8adea79 done
+#9 DONE 0.0s
+
+#7 [internal] load build context
+#7 transferring context: 35.06kB done
+#7 DONE 0.0s
+
+#10 [runtime 3/4] WORKDIR /app
+#10 CACHED
+
+#11 [build 3/6] COPY --chown=gradle:gradle settings.gradle build.gradle gradle.properties ./
+#11 CACHED
+
+#12 [build 5/6] COPY --chown=gradle:gradle src ./src
+#12 CACHED
+
+#13 [build 2/6] WORKDIR /home/gradle/src
+#13 CACHED
+
+#14 [build 4/6] RUN gradle --no-daemon -q dependencies --configuration runtimeClasspath > /dev/null 2>&1 || true
+#14 CACHED
+
+#15 [runtime 2/4] RUN groupadd --system app && useradd --system --gid app --home-dir /app app
+#15 CACHED
+
+#16 [build 6/6] RUN gradle --no-daemon installDist
+#16 CACHED
+
+#17 [runtime 4/4] COPY --from=build --chown=app:app /home/gradle/src/build/install/api ./
+#17 CACHED
+
+#18 exporting to image
+#18 exporting layers done
+#18 exporting manifest sha256:1fc6b1400912bc6de12f92351407fad2f7eb618009b8148ff31fc08641b275ad done
+#18 exporting config sha256:2c64eecab52d9b468dec9e8c742d7f180a61c1b0990e5d3b11d19739df73a41f done
+#18 exporting attestation manifest sha256:fc607988e893a5dbbbacc975015d83f44357d02264a47c81f8a452e161e6e514 done
+#18 exporting manifest list sha256:20447b38e496e40fb029585f9fc00975f39e4681897f608c305a0485fc1e5f13 done
+#18 naming to docker.io/library/ktor-realworld:latest done
+#18 unpacking to docker.io/library/ktor-realworld:latest done
+#18 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/default/default/3afhut2dm2ev5ditnm7564bss
+up at http://localhost:18080
+  ok    only port 8080 listening
+  ok    token forged with the old committed key rejected (401)
+stopped
+=== gate: PASSED ===
+exit=0 finished=2026-09-15T21:01:40Z

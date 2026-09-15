@@ -4,11 +4,13 @@ fest_id: 03_prove_ci_fails_red.md
 fest_name: prove_ci_fails_red
 fest_parent: 01_ci_pipeline
 fest_order: 3
-fest_status: pending
+fest_status: completed
 fest_autonomy: low
 fest_created: 2026-09-15T12:01:26.48538-06:00
+fest_updated: 2026-09-15T14:57:50.29742-06:00
 fest_tracking: true
 ---
+
 
 # Task: Prove CI turns red with a readable annotation
 

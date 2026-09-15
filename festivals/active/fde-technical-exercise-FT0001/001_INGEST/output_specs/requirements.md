@@ -155,6 +155,11 @@ grader looking for CI evidence currently sees nothing.
 *Acceptance:* the zero-run cause identified and recorded, and at least one completed run visible on the
 fork's Actions tab. If the cause is the fork opt-in, enabling it is a human click in the GitHub UI.
 
+*Diagnosed in 003_IMPLEMENT (2026-09-15):* **not the fork opt-in.** With no settings changed, probe PR #2 got
+run 35022352856 three seconds after opening, and the run completed. The exact cause of the earlier zero runs
+is unproven. The one recorded difference is that PR #1 changed no `.github/` files, while PR #2 was the fork's
+first push to change the workflow file. Evidence: `003_IMPLEMENT/01_ci_pipeline/results/01_zero_ci_runs.md`.
+
 ## P2 — only if time and risk allow
 
 ### R8 — `unfollow` row-orientation bug · CS (demoted from P1)

@@ -4,11 +4,13 @@ fest_id: 02_replace_workflow_with_jdk_matrix.md
 fest_name: replace_workflow_with_jdk_matrix
 fest_parent: 01_ci_pipeline
 fest_order: 2
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.464587-06:00
+fest_updated: 2026-09-15T14:51:21.630023-06:00
 fest_tracking: true
 ---
+
 
 # Task: Replace the workflow with a pinned JDK 17/21 matrix
 
