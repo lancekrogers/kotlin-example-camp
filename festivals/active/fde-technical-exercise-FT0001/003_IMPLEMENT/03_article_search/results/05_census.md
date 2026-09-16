@@ -1,0 +1,26 @@
+# Task 05: Search endpoint tests — census
+
+From `just test census` after `just test all`:
+
+```
+  PagingTest                 ran=7   passed=7   failed=0   skipped=0
+  ArticleSchemaTest          ran=1   passed=1   failed=0   skipped=0
+  ArticleSearchRepositoryTest ran=8   passed=8   failed=0   skipped=0
+  LowerOnClobProbeTest       ran=1   passed=1   failed=0   skipped=0
+  ArticleServiceTest         ran=5   passed=5   failed=0   skipped=0
+  SlugTest                   ran=7   passed=7   failed=0   skipped=0
+  ArticleControllerTest      ran=1   passed=1   failed=0   skipped=13
+  ArticleCreateTest          ran=9   passed=9   failed=0   skipped=0
+  ArticleSearchTest          ran=11  passed=11  failed=0   skipped=0
+  CommentControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  ProfileControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  TagControllerTest          ran=1   passed=1   failed=0   skipped=0
+  UserControllerTest         ran=4   passed=4   failed=0   skipped=0
+  JsonAssertionsTest         ran=5   passed=5   failed=0   skipped=0
+
+  TOTAL ran=60 passed=60 failed=0 skipped=19
+
+  WARNING: 19 test(s) skipped. A green build does not mean the application works.
+```
+
+`ArticleSearchTest` ran 11 tests, passed 11, skipped 0 (from `build/test-results/test/TEST-io.realworld.app.web.controllers.ArticleSearchTest.xml`: `tests="11" skipped="0" failures="0" errors="0"`).

@@ -113,3 +113,4 @@
 {"ts":"2026-09-16T08:02:59.318365Z","event":"completed","task":"003_IMPLEMENT/03_article_search/01_prove_lower_on_clob_body.md"}
 {"ts":"2026-09-16T08:08:21.795597Z","event":"completed","task":"003_IMPLEMENT/03_article_search/02_search_repository_query.md"}
 {"ts":"2026-09-16T08:11:12.424123Z","event":"completed","task":"003_IMPLEMENT/03_article_search/03_search_service_validation_and_paging.md"}
+{"ts":"2026-09-16T08:14:58.093894Z","event":"completed","task":"003_IMPLEMENT/03_article_search/04_public_search_route.md"}
