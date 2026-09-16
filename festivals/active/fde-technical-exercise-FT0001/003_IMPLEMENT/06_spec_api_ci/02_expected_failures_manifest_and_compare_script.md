@@ -4,11 +4,13 @@ fest_id: 02_expected_failures_manifest_and_compare_script.md
 fest_name: expected_failures_manifest_and_compare_script
 fest_parent: 06_spec_api_ci
 fest_order: 2
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:05:06.128553-06:00
+fest_updated: 2026-09-16T03:49:37.566411-06:00
 fest_tracking: true
 ---
+
 
 # Task: Add the expected-failures manifest and comparator
 
