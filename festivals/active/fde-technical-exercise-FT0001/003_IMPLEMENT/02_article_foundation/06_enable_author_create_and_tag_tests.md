@@ -4,11 +4,13 @@ fest_id: 06_enable_author_create_and_tag_tests.md
 fest_name: enable_author_create_and_tag_tests
 fest_parent: 02_article_foundation
 fest_order: 6
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.606801-06:00
+fest_updated: 2026-09-16T01:41:28.360409-06:00
 fest_tracking: true
 ---
+
 
 # Task: Enable the author's create and tags tests
 

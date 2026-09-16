@@ -1,0 +1,15 @@
+  ArticleSchemaTest          ran=1   passed=1   failed=0   skipped=0
+  ArticleServiceTest         ran=5   passed=5   failed=0   skipped=0
+  SlugTest                   ran=7   passed=7   failed=0   skipped=0
+  ArticleControllerTest      ran=1   passed=1   failed=0   skipped=13
+  ArticleCreateTest          ran=7   passed=7   failed=0   skipped=0
+  CommentControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  ProfileControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  TagControllerTest          ran=1   passed=1   failed=0   skipped=0
+  UserControllerTest         ran=4   passed=4   failed=0   skipped=0
+  JsonAssertionsTest         ran=5   passed=5   failed=0   skipped=0
+
+  TOTAL ran=31 passed=31 failed=0 skipped=19
+
+  WARNING: 19 test(s) skipped. A green build does not mean the application works.
+exit code: 0

@@ -106,3 +106,6 @@
 {"ts":"2026-09-16T07:28:34.009469Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/03_slug_generation.md"}
 {"ts":"2026-09-16T07:31:47.017681Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/04_article_repository_and_service_create.md"}
 {"ts":"2026-09-16T07:35:37.941641Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/05_wire_create_article_endpoint.md"}
+{"ts":"2026-09-16T07:41:28.360313Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/06_enable_author_create_and_tag_tests.md"}
+{"ts":"2026-09-16T07:45:28.767388Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/08_review.md"}
+{"ts":"2026-09-16T07:46:38.600138Z","event":"completed","task":"003_IMPLEMENT/02_article_foundation/07_testing.md"}

@@ -1,0 +1,121 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.3s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+#3 resolve docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32 0.0s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 ...
+
+#5 [internal] load metadata for docker.io/library/gradle:8.14-jdk17
+#5 DONE 0.3s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 DONE 0.3s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 167B done
+#6 DONE 0.0s
+
+#7 [runtime 1/4] FROM docker.io/library/eclipse-temurin:17-jre@sha256:146ac3f7d1cc80d15c09b32378d31e3b07ef6133e43f6e7354e403448e3cbefc
+#7 resolve docker.io/library/eclipse-temurin:17-jre@sha256:146ac3f7d1cc80d15c09b32378d31e3b07ef6133e43f6e7354e403448e3cbefc done
+#7 DONE 0.0s
+
+#8 [build 1/6] FROM docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca
+#8 resolve docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca 0.0s done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 25.41kB done
+#9 DONE 0.0s
+
+#10 [build 3/6] COPY --chown=gradle:gradle settings.gradle build.gradle gradle.properties ./
+#10 CACHED
+
+#11 [build 2/6] WORKDIR /home/gradle/src
+#11 CACHED
+
+#12 [build 4/6] RUN gradle --no-daemon -q dependencies --configuration runtimeClasspath > /dev/null 2>&1 || true
+#12 CACHED
+
+#13 [build 5/6] COPY --chown=gradle:gradle src ./src
+#13 DONE 0.0s
+
+#14 [build 6/6] RUN gradle --no-daemon installDist
+#14 0.382 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#14 0.879 Daemon will be stopped at the end of the build 
+#14 3.281 > Task :checkKotlinGradlePluginConfigurationErrors
+#14 6.178 > Task :processResources
+#14 10.18 
+#14 10.18 > Task :compileKotlin
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:15:13 Variable 'tag' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:16:13 Variable 'author' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:17:13 Variable 'favorited' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:18:13 Variable 'limit' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:19:13 Variable 'offset' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:27:13 Variable 'limit' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:28:13 Variable 'offset' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:53:13 Variable 'slug' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:10:13 Variable 'slug' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:27:13 Variable 'slug' is never used
+#14 10.18 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:28:13 Variable 'id' is never used
+#14 10.18 
+#14 10.18 > Task :compileJava NO-SOURCE
+#14 10.18 > Task :classes
+#14 10.18 > Task :jar
+#14 10.78 > Task :startScripts
+#14 10.85 > Task :installDist
+#14 10.85 
+#14 10.85 [Incubating] Problems report is available at: file:///home/gradle/src/build/reports/problems/problems-report.html
+#14 10.85 
+#14 10.85 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+#14 10.85 
+#14 10.85 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+#14 10.85 
+#14 10.85 For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+#14 10.85 
+#14 10.85 BUILD SUCCESSFUL in 10s
+#14 10.85 6 actionable tasks: 6 executed
+#14 DONE 11.3s
+
+#15 [runtime 2/4] RUN groupadd --system app && useradd --system --gid app --home-dir /app app
+#15 CACHED
+
+#16 [runtime 3/4] WORKDIR /app
+#16 CACHED
+
+#17 [runtime 4/4] COPY --from=build --chown=app:app /home/gradle/src/build/install/api ./
+#17 DONE 0.0s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.4s done
+#18 exporting manifest sha256:1710761a823cbf1cb3a5f42854457bb69ae0d6a6f67659843380bc194356af01 done
+#18 exporting config sha256:d5193e389bd532b27b7c33c6e5ddf557ca0f2417583f1ac339f5253306244edd done
+#18 exporting attestation manifest sha256:8bc6f54dfb791011638a2ee8aadfe85fc70083e3aca715704b0205a3e40a8e50 done
+#18 exporting manifest list sha256:90b1dd85af4001d7e210e88ee7c5fddd4b75e5790dc0374a3c394ebbb9e986c9 done
+#18 naming to docker.io/library/ktor-realworld:latest done
+#18 unpacking to docker.io/library/ktor-realworld:latest 0.1s done
+#18 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/y8li2cstul0khjp0ie2kflq2x
+up at http://localhost:18080
+  ok    register (200)
+  ok    register returned no password material
+  ok    login (200)
+  ok    get current user (200)
+  ok    wrong password -> 401 (401)
+  ok    blank password -> 422 (422)
+  ok    no token -> 401 (401)
+smoke: PASSED
+stopped
+exit code: 0
+
+Note: `just docker verify` exercises user auth endpoints only. POST /articles container verification is recorded in results/05_wire_create_article_endpoint.md (200 with token, 401 without, 422 missing body/blank title).
