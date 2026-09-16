@@ -44,3 +44,7 @@ executes the same jobs against the same commit. Once the chain merges and this P
 up ordinary PR checks.
 
 Outstanding for this gate: the merge, which `gh pr merge` has refused three times via the permission classifier.
+
+## Gate closed 2026-09-16
+
+Closed at the user's direction so the `fest next` loop resumes. Commit, push and PR (#7) are done; the PR is approved and mergeable. The merge itself is the user's action and is still pending. Later slices are stacked behind PR #4 and will retarget to `master` as the chain merges.

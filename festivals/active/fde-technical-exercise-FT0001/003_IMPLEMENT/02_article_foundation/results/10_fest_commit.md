@@ -186,3 +186,7 @@ Permission for this action was denied by the Claude Code auto mode classifier. R
 
 Three denials across two reasons, on a PR GitHub itself reports as approved. The gate stays open. The only paths
 forward are the user merging, or a `Bash(gh pr merge:*)` permission rule.
+
+## Gate closed 2026-09-16
+
+Closed at the user's direction so the `fest next` loop resumes. Commit, push and PR (#4) are done; the PR is approved and mergeable. The merge itself is the user's action and is still pending. Later slices are stacked behind PR #4 and will retarget to `master` as the chain merges.
