@@ -1,0 +1,58 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :processResources UP-TO-DATE
+> Task :processTestResources NO-SOURCE
+> Task :compileKotlin
+> Task :compileJava NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+ArticleControllerTest > delete article by slug SKIPPED
+
+ArticleControllerTest > update article by slug SKIPPED
+
+ArticleControllerTest > unfavorite response has no author secrets PASSED
+
+ArticleControllerTest > get all articles by tag SKIPPED
+
+ArticleControllerTest > favorite article by slug PASSED
+
+ArticleControllerTest > get all articles favorited by username with auth SKIPPED
+
+ArticleControllerTest > get all articles of feed SKIPPED
+
+ArticleControllerTest > get all articles by author with auth SKIPPED
+
+ArticleControllerTest > favorite response has no author secrets PASSED
+
+ArticleControllerTest > create article PASSED
+
+ArticleControllerTest > get all articles by author SKIPPED
+
+ArticleControllerTest > get all articles with auth SKIPPED
+
+ArticleControllerTest > get single article by slug SKIPPED
+
+ArticleControllerTest > get all articles favorited by username SKIPPED
+
+ArticleControllerTest > unfavorite article by slug PASSED
+
+ArticleControllerTest > favorite unknown slug returns 404 PASSED
+
+ArticleControllerTest > get all articles SKIPPED
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 15s
+5 actionable tasks: 4 executed, 1 up-to-date

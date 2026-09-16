@@ -4,11 +4,13 @@ fest_id: 04_popular_tests_and_enable_author_favorite_tests.md
 fest_name: popular_tests_and_enable_author_favorite_tests
 fest_parent: 04_popular_articles
 fest_order: 4
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.790329-06:00
+fest_updated: 2026-09-16T02:53:36.843496-06:00
 fest_tracking: true
 ---
+
 
 # Task: Test Popular and enable the author's favorite tests
 
