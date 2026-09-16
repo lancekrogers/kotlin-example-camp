@@ -4,11 +4,13 @@ fest_id: 01_comments_schema_and_add_comment.md
 fest_name: comments_schema_and_add_comment
 fest_parent: 05_user_activity
 fest_order: 1
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.811307-06:00
+fest_updated: 2026-09-16T03:14:55.532113-06:00
 fest_tracking: true
 ---
+
 
 # Task: Add comments and POST /articles/{slug}/comments
 
