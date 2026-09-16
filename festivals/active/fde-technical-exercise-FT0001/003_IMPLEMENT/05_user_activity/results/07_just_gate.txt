@@ -1,0 +1,459 @@
+# just gate on feat/user-activity @ 6cdfe37, started 2026-09-16T09:37:58Z
+=== gate: supply-chain checks ===
+  ok    no jcenter()
+  ok    no mavenLocal()
+  ok    all versions pinned
+  ok    Gradle distribution checksum pinned
+=== gate: secret scan ===
+  ok    no hardcoded credentials in src/main
+=== gate: build on JDK 17 ===
+--- building on JDK 17 ---
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :compileTestKotlin FROM-CACHE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test FROM-CACHE
+> Task :check UP-TO-DATE
+> Task :build
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 8s
+10 actionable tasks: 7 executed, 3 from cache
+=== gate: build on JDK 21 ===
+--- building on JDK 21 ---
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :clean
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources
+> Task :classes
+> Task :jar
+> Task :startScripts
+> Task :distTar
+> Task :distZip
+> Task :assemble
+> Task :processTestResources NO-SOURCE
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+PagingTest > parse_rejectsNonIntegerOffset PASSED
+
+PagingTest > parse_rejectsNonIntegerLimit PASSED
+
+PagingTest > parse_rejectsNegativeOffset PASSED
+
+PagingTest > parse_acceptsLimitOneHundred PASSED
+
+PagingTest > parse_acceptsLimitOne PASSED
+
+PagingTest > parse_rejectsLimitZero PASSED
+
+PagingTest > parse_rejectsLimitAboveMax PASSED
+
+PagingTest > parse_defaultsToTwentyAndZero PASSED
+
+ArticleFavoritesRepositoryTest > favoriting twice leaves one row with favoritesCount 1 PASSED
+
+ArticleFavoritesRepositoryTest > unfavoriting twice raises no error and favoritesCount is 0 PASSED
+
+ArticleFavoritesRepositoryTest > unknown slug throws NotFoundException PASSED
+
+ArticleFavoritesRepositoryTest > unknown email throws NotFoundException PASSED
+
+ArticleFavoritesRepositoryTest > favorited depends on viewer PASSED
+
+ArticleFollowingMappingTest > following depends on viewer PASSED
+
+ArticleSchemaTest > schema creation is idempotent and tags and slug constraints hold PASSED
+
+ArticleSearchRepositoryTest > results ordered by createdAt descending PASSED
+
+ArticleSearchRepositoryTest > body only match is found PASSED
+
+ArticleSearchRepositoryTest > percent sign in search term is literal PASSED
+
+ArticleSearchRepositoryTest > title only match is found PASSED
+
+ArticleSearchRepositoryTest > results with equal createdAt ordered by id descending PASSED
+
+ArticleSearchRepositoryTest > search is case insensitive PASSED
+
+ArticleSearchRepositoryTest > paging returns page size and total match count PASSED
+
+ArticleSearchRepositoryTest > underscore in search term is literal PASSED
+
+LowerOnClobProbeTest > lower on the text body matches case-insensitively with an escaped literal PASSED
+
+ArticleServiceTest > create normalizes tags PASSED
+
+ArticleServiceTest > create rejects blank title PASSED
+
+ArticleServiceTest > create rejects blank body PASSED
+
+ArticleServiceTest > create appends -2 slug on duplicate title PASSED
+
+ArticleServiceTest > create rejects blank description PASSED
+
+SlugTest > uniqueSlug_reservedWords PASSED
+
+SlugTest > toSlugBase_allSymbolsFallsBackToArticle PASSED
+
+SlugTest > toSlugBase_punctuationRuns PASSED
+
+SlugTest > toSlugBase_authorExpectations PASSED
+
+SlugTest > uniqueSlug_successiveCollisions PASSED
+
+SlugTest > toSlugBase_diacritics PASSED
+
+SlugTest > toSlugBase_kebabCase PASSED
+
+ArticleControllerTest > delete article by slug SKIPPED
+
+ArticleControllerTest > update article by slug SKIPPED
+
+ArticleControllerTest > unfavorite response has no author secrets PASSED
+
+ArticleControllerTest > get all articles by tag SKIPPED
+
+ArticleControllerTest > favorite article by slug PASSED
+
+ArticleControllerTest > get all articles favorited by username with auth SKIPPED
+
+ArticleControllerTest > get all articles of feed SKIPPED
+
+ArticleControllerTest > get all articles by author with auth SKIPPED
+
+ArticleControllerTest > favorite response has no author secrets PASSED
+
+ArticleControllerTest > create article PASSED
+
+ArticleControllerTest > get all articles by author SKIPPED
+
+ArticleControllerTest > get all articles with auth SKIPPED
+
+ArticleControllerTest > get single article by slug SKIPPED
+
+ArticleControllerTest > get all articles favorited by username SKIPPED
+
+ArticleControllerTest > unfavorite article by slug PASSED
+
+ArticleControllerTest > favorite unknown slug returns 404 PASSED
+
+ArticleControllerTest > get all articles SKIPPED
+
+ArticleCreateTest > a_writes_row PASSED
+
+ArticleCreateTest > b_row_survives_new_app PASSED
+
+ArticleCreateTest > blank description returns 422 PASSED
+
+ArticleCreateTest > blank title returns 422 PASSED
+
+ArticleCreateTest > create without token returns 401 PASSED
+
+ArticleCreateTest > duplicate title slug ends with -2 PASSED
+
+ArticleCreateTest > missing body returns 422 PASSED
+
+ArticleCreateTest > raw response has no author secrets and ISO createdAt PASSED
+
+ArticleCreateTest > whitespace body returns 422 PASSED
+
+ArticleSearchTest > no author secrets PASSED
+
+ArticleSearchTest > bad paging PASSED
+
+ArticleSearchTest > no match PASSED
+
+ArticleSearchTest > case insensitive PASSED
+
+ArticleSearchTest > anonymous request is public PASSED
+
+ArticleSearchTest > blank q PASSED
+
+ArticleSearchTest > limit below total PASSED
+
+ArticleSearchTest > missing q PASSED
+
+ArticleSearchTest > title only match PASSED
+
+ArticleSearchTest > body only match PASSED
+
+ArticleSearchTest > percent and underscore are literal PASSED
+
+CommentControllerTest > delete comment for article by slug SKIPPED
+
+CommentControllerTest > get all comments for article by slug SKIPPED
+
+CommentControllerTest > add comment for article by slug PASSED
+
+CommentCreateTest > raw response has no author secrets PASSED
+
+CommentCreateTest > blank body returns 422 PASSED
+
+CommentCreateTest > missing body returns 422 PASSED
+
+CommentCreateTest > unknown slug returns 404 PASSED
+
+CommentCreateTest > no token returns 401 PASSED
+
+PopularArticlesTest > more favorites ranks first PASSED
+
+PopularArticlesTest > bad offset PASSED
+
+PopularArticlesTest > no author secrets PASSED
+
+PopularArticlesTest > offset past end PASSED
+
+PopularArticlesTest > zero favorite included PASSED
+
+PopularArticlesTest > pages are stable PASSED
+
+PopularArticlesTest > double favorite PASSED
+
+PopularArticlesTest > favorited is viewer specific PASSED
+
+PopularArticlesTest > bad limit PASSED
+
+PopularArticlesTest > equal counts newest first PASSED
+
+PopularArticlesTest > anonymous is public PASSED
+
+ProfileControllerTest > unfollow profile by username SKIPPED
+
+ProfileControllerTest > get profile by username SKIPPED
+
+ProfileControllerTest > follow profile by username SKIPPED
+
+ProfileStatsTest > favorites count what the user gave PASSED
+
+ProfileStatsTest > unknown username is 404 PASSED
+
+ProfileStatsTest > new user has zero activity PASSED
+
+ProfileStatsTest > anonymous request is public PASSED
+
+ProfileStatsTest > article comment and favorite each count once PASSED
+
+TagControllerTest > get all tags PASSED
+
+UserControllerTest > update user data PASSED
+
+UserControllerTest > get current user by token PASSED
+
+UserControllerTest > success login with email and password PASSED
+
+UserControllerTest > success register user PASSED
+
+JsonAssertionsTest > throwsWhenAuthorInArticlesArrayHasForbiddenField PASSED
+
+JsonAssertionsTest > passesForCleanAuthorProfile PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasPassword PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasEmail PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasToken PASSED
+
+> Task :check
+> Task :build
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 7s
+10 actionable tasks: 9 executed, 1 from cache
+=== gate: tests ===
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :compileKotlin FROM-CACHE
+> Task :compileJava NO-SOURCE
+> Task :processResources UP-TO-DATE
+> Task :classes UP-TO-DATE
+> Task :compileTestKotlin FROM-CACHE
+> Task :compileTestJava NO-SOURCE
+> Task :processTestResources NO-SOURCE
+> Task :testClasses UP-TO-DATE
+> Task :test FROM-CACHE
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3s
+5 actionable tasks: 1 executed, 3 from cache, 1 up-to-date
+=== gate: enabled-test census ===
+  PagingTest                 ran=8   passed=8   failed=0   skipped=0
+  ArticleFavoritesRepositoryTest ran=5   passed=5   failed=0   skipped=0
+  ArticleFollowingMappingTest ran=1   passed=1   failed=0   skipped=0
+  ArticleSchemaTest          ran=1   passed=1   failed=0   skipped=0
+  ArticleSearchRepositoryTest ran=8   passed=8   failed=0   skipped=0
+  LowerOnClobProbeTest       ran=1   passed=1   failed=0   skipped=0
+  ArticleServiceTest         ran=5   passed=5   failed=0   skipped=0
+  SlugTest                   ran=7   passed=7   failed=0   skipped=0
+  ArticleControllerTest      ran=6   passed=6   failed=0   skipped=11
+  ArticleCreateTest          ran=9   passed=9   failed=0   skipped=0
+  ArticleSearchTest          ran=11  passed=11  failed=0   skipped=0
+  CommentControllerTest      ran=1   passed=1   failed=0   skipped=2
+  CommentCreateTest          ran=5   passed=5   failed=0   skipped=0
+  PopularArticlesTest        ran=11  passed=11  failed=0   skipped=0
+  ProfileControllerTest      ran=0   passed=0   failed=0   skipped=3  <-- entire class disabled
+  ProfileStatsTest           ran=5   passed=5   failed=0   skipped=0
+  TagControllerTest          ran=1   passed=1   failed=0   skipped=0
+  UserControllerTest         ran=4   passed=4   failed=0   skipped=0
+  JsonAssertionsTest         ran=5   passed=5   failed=0   skipped=0
+
+  TOTAL ran=94 passed=94 failed=0 skipped=16
+
+  WARNING: 16 test(s) skipped. A green build does not mean the application works.
+=== gate: runtime checks ===
+  container not running; starting it
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.3s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+#3 resolve docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32 done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 ...
+
+#5 [internal] load metadata for docker.io/library/gradle:8.14-jdk17
+#5 DONE 0.3s
+
+#4 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#4 DONE 0.4s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 167B done
+#6 DONE 0.0s
+
+#7 [runtime 1/4] FROM docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5
+#7 resolve docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5 done
+#7 DONE 0.0s
+
+#8 [build 1/6] FROM docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca
+#8 resolve docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca 0.0s done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 9.43kB done
+#9 DONE 0.0s
+
+#10 [build 2/6] WORKDIR /home/gradle/src
+#10 CACHED
+
+#11 [build 3/6] COPY --chown=gradle:gradle settings.gradle build.gradle gradle.properties ./
+#11 CACHED
+
+#12 [build 4/6] RUN gradle --no-daemon -q dependencies --configuration runtimeClasspath > /dev/null 2>&1 || true
+#12 CACHED
+
+#13 [build 5/6] COPY --chown=gradle:gradle src ./src
+#13 DONE 0.0s
+
+#14 [build 6/6] RUN gradle --no-daemon installDist
+#14 0.348 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#14 0.749 Daemon will be stopped at the end of the build 
+#14 2.750 > Task :checkKotlinGradlePluginConfigurationErrors
+#14 5.448 > Task :processResources
+#14 9.647 
+#14 9.649 > Task :compileKotlin
+#14 9.649 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:15:13 Variable 'tag' is never used
+#14 9.649 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:16:13 Variable 'author' is never used
+#14 9.649 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:17:13 Variable 'favorited' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:18:13 Variable 'limit' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:19:13 Variable 'offset' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:27:13 Variable 'limit' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:28:13 Variable 'offset' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:53:13 Variable 'slug' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:31:13 Variable 'slug' is never used
+#14 9.650 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:32:13 Variable 'id' is never used
+#14 9.747 
+#14 9.747 > Task :compileJava NO-SOURCE
+#14 9.748 > Task :classes
+#14 9.748 > Task :jar
+#14 10.35 > Task :startScripts
+#14 10.35 > Task :installDist
+#14 10.41 
+#14 10.41 [Incubating] Problems report is available at: file:///home/gradle/src/build/reports/problems/problems-report.html
+#14 10.41 
+#14 10.41 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+#14 10.41 
+#14 10.41 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+#14 10.41 
+#14 10.41 For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+#14 10.41 
+#14 10.41 BUILD SUCCESSFUL in 10s
+#14 10.41 6 actionable tasks: 6 executed
+#14 DONE 10.9s
+
+#15 [runtime 2/4] RUN groupadd --system app && useradd --system --gid app --home-dir /app app
+#15 CACHED
+
+#16 [runtime 3/4] WORKDIR /app
+#16 CACHED
+
+#17 [runtime 4/4] COPY --from=build --chown=app:app /home/gradle/src/build/install/api ./
+#17 DONE 0.0s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.4s done
+#18 exporting manifest sha256:30301e4cf9946f0c9a30366ee498dbfb3a859e7c057a81c2343678517ba5aae1 done
+#18 exporting config sha256:2388ec8ea742009de29f17e0268669ef236a60bbc774c89f4ee297b782d84737 done
+#18 exporting attestation manifest sha256:f23e9234118231879bc4c579bd40b7a65d26b52d00c3685e0e7af25dab3927aa done
+#18 exporting manifest list sha256:4f0f2ad40bae24c800c69ff24079b45450135660a6c61ec53471d8493f465775 done
+#18 naming to docker.io/library/ktor-realworld:latest done
+#18 unpacking to docker.io/library/ktor-realworld:latest 0.1s done
+#18 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/l8vwn1bjoinr4zatx6tbczo1o
+up at http://localhost:18080
+  ok    only port 8080 listening
+  ok    token forged with the old committed key rejected (401)
+stopped
+=== gate: PASSED ===
+exit=0

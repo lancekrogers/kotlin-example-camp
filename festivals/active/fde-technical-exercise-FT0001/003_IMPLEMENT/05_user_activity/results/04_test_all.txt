@@ -1,0 +1,255 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+> Task :checkKotlinGradlePluginConfigurationErrors
+> Task :processResources
+> Task :processTestResources NO-SOURCE
+
+> Task :compileKotlin
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:15:13 Variable 'tag' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:16:13 Variable 'author' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:17:13 Variable 'favorited' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:18:13 Variable 'limit' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:19:13 Variable 'offset' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:27:13 Variable 'limit' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:28:13 Variable 'offset' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:53:13 Variable 'slug' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:31:13 Variable 'slug' is never used
+w: file:///app/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:32:13 Variable 'id' is never used
+
+> Task :compileJava NO-SOURCE
+> Task :classes
+> Task :compileTestKotlin
+> Task :compileTestJava NO-SOURCE
+> Task :testClasses UP-TO-DATE
+
+> Task :test
+
+PagingTest > parse_rejectsNonIntegerOffset PASSED
+
+PagingTest > parse_rejectsNonIntegerLimit PASSED
+
+PagingTest > parse_rejectsNegativeOffset PASSED
+
+PagingTest > parse_acceptsLimitOneHundred PASSED
+
+PagingTest > parse_acceptsLimitOne PASSED
+
+PagingTest > parse_rejectsLimitZero PASSED
+
+PagingTest > parse_rejectsLimitAboveMax PASSED
+
+PagingTest > parse_defaultsToTwentyAndZero PASSED
+
+ArticleFavoritesRepositoryTest > favoriting twice leaves one row with favoritesCount 1 PASSED
+
+ArticleFavoritesRepositoryTest > unfavoriting twice raises no error and favoritesCount is 0 PASSED
+
+ArticleFavoritesRepositoryTest > unknown slug throws NotFoundException PASSED
+
+ArticleFavoritesRepositoryTest > unknown email throws NotFoundException PASSED
+
+ArticleFavoritesRepositoryTest > favorited depends on viewer PASSED
+
+ArticleFollowingMappingTest > following depends on viewer PASSED
+
+ArticleSchemaTest > schema creation is idempotent and tags and slug constraints hold PASSED
+
+ArticleSearchRepositoryTest > results ordered by createdAt descending PASSED
+
+ArticleSearchRepositoryTest > body only match is found PASSED
+
+ArticleSearchRepositoryTest > percent sign in search term is literal PASSED
+
+ArticleSearchRepositoryTest > title only match is found PASSED
+
+ArticleSearchRepositoryTest > results with equal createdAt ordered by id descending PASSED
+
+ArticleSearchRepositoryTest > search is case insensitive PASSED
+
+ArticleSearchRepositoryTest > paging returns page size and total match count PASSED
+
+ArticleSearchRepositoryTest > underscore in search term is literal PASSED
+
+LowerOnClobProbeTest > lower on the text body matches case-insensitively with an escaped literal PASSED
+
+ArticleServiceTest > create normalizes tags PASSED
+
+ArticleServiceTest > create rejects blank title PASSED
+
+ArticleServiceTest > create rejects blank body PASSED
+
+ArticleServiceTest > create appends -2 slug on duplicate title PASSED
+
+ArticleServiceTest > create rejects blank description PASSED
+
+SlugTest > uniqueSlug_reservedWords PASSED
+
+SlugTest > toSlugBase_allSymbolsFallsBackToArticle PASSED
+
+SlugTest > toSlugBase_punctuationRuns PASSED
+
+SlugTest > toSlugBase_authorExpectations PASSED
+
+SlugTest > uniqueSlug_successiveCollisions PASSED
+
+SlugTest > toSlugBase_diacritics PASSED
+
+SlugTest > toSlugBase_kebabCase PASSED
+
+ArticleControllerTest > delete article by slug SKIPPED
+
+ArticleControllerTest > update article by slug SKIPPED
+
+ArticleControllerTest > unfavorite response has no author secrets PASSED
+
+ArticleControllerTest > get all articles by tag SKIPPED
+
+ArticleControllerTest > favorite article by slug PASSED
+
+ArticleControllerTest > get all articles favorited by username with auth SKIPPED
+
+ArticleControllerTest > get all articles of feed SKIPPED
+
+ArticleControllerTest > get all articles by author with auth SKIPPED
+
+ArticleControllerTest > favorite response has no author secrets PASSED
+
+ArticleControllerTest > create article PASSED
+
+ArticleControllerTest > get all articles by author SKIPPED
+
+ArticleControllerTest > get all articles with auth SKIPPED
+
+ArticleControllerTest > get single article by slug SKIPPED
+
+ArticleControllerTest > get all articles favorited by username SKIPPED
+
+ArticleControllerTest > unfavorite article by slug PASSED
+
+ArticleControllerTest > favorite unknown slug returns 404 PASSED
+
+ArticleControllerTest > get all articles SKIPPED
+
+ArticleCreateTest > a_writes_row PASSED
+
+ArticleCreateTest > b_row_survives_new_app PASSED
+
+ArticleCreateTest > blank description returns 422 PASSED
+
+ArticleCreateTest > blank title returns 422 PASSED
+
+ArticleCreateTest > create without token returns 401 PASSED
+
+ArticleCreateTest > duplicate title slug ends with -2 PASSED
+
+ArticleCreateTest > missing body returns 422 PASSED
+
+ArticleCreateTest > raw response has no author secrets and ISO createdAt PASSED
+
+ArticleCreateTest > whitespace body returns 422 PASSED
+
+ArticleSearchTest > no author secrets PASSED
+
+ArticleSearchTest > bad paging PASSED
+
+ArticleSearchTest > no match PASSED
+
+ArticleSearchTest > case insensitive PASSED
+
+ArticleSearchTest > anonymous request is public PASSED
+
+ArticleSearchTest > blank q PASSED
+
+ArticleSearchTest > limit below total PASSED
+
+ArticleSearchTest > missing q PASSED
+
+ArticleSearchTest > title only match PASSED
+
+ArticleSearchTest > body only match PASSED
+
+ArticleSearchTest > percent and underscore are literal PASSED
+
+CommentControllerTest > delete comment for article by slug SKIPPED
+
+CommentControllerTest > get all comments for article by slug SKIPPED
+
+CommentControllerTest > add comment for article by slug PASSED
+
+CommentCreateTest > raw response has no author secrets PASSED
+
+CommentCreateTest > blank body returns 422 PASSED
+
+CommentCreateTest > unknown slug returns 404 PASSED
+
+CommentCreateTest > no token returns 401 PASSED
+
+PopularArticlesTest > more favorites ranks first PASSED
+
+PopularArticlesTest > bad offset PASSED
+
+PopularArticlesTest > no author secrets PASSED
+
+PopularArticlesTest > offset past end PASSED
+
+PopularArticlesTest > zero favorite included PASSED
+
+PopularArticlesTest > pages are stable PASSED
+
+PopularArticlesTest > double favorite PASSED
+
+PopularArticlesTest > favorited is viewer specific PASSED
+
+PopularArticlesTest > bad limit PASSED
+
+PopularArticlesTest > equal counts newest first PASSED
+
+PopularArticlesTest > anonymous is public PASSED
+
+ProfileControllerTest > unfollow profile by username SKIPPED
+
+ProfileControllerTest > get profile by username SKIPPED
+
+ProfileControllerTest > follow profile by username SKIPPED
+
+ProfileStatsTest > favorites count what the user gave PASSED
+
+ProfileStatsTest > unknown username is 404 PASSED
+
+ProfileStatsTest > new user has zero activity PASSED
+
+ProfileStatsTest > anonymous request is public PASSED
+
+ProfileStatsTest > article comment and favorite each count once PASSED
+
+TagControllerTest > get all tags PASSED
+
+UserControllerTest > update user data PASSED
+
+UserControllerTest > get current user by token PASSED
+
+UserControllerTest > success login with email and password PASSED
+
+UserControllerTest > success register user PASSED
+
+JsonAssertionsTest > throwsWhenAuthorInArticlesArrayHasForbiddenField PASSED
+
+JsonAssertionsTest > passesForCleanAuthorProfile PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasPassword PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasEmail PASSED
+
+JsonAssertionsTest > throwsWhenAuthorHasToken PASSED
+
+[Incubating] Problems report is available at: file:///app/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 1m 3s
+5 actionable tasks: 5 executed
+EXIT_CODE=0

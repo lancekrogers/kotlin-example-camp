@@ -4,11 +4,13 @@ fest_id: 03_stats_tests_and_enable_author_comment_test.md
 fest_name: stats_tests_and_enable_author_comment_test
 fest_parent: 05_user_activity
 fest_order: 3
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.850535-06:00
+fest_updated: 2026-09-16T03:25:43.218087-06:00
 fest_tracking: true
 ---
+
 
 # Task: Test User Activity and enable the author's add-comment test
 

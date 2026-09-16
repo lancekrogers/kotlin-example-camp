@@ -1,0 +1,115 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.3s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+#3 resolve docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32 done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/gradle:8.14-jdk17
+#4 DONE 0.3s
+
+#5 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#5 DONE 0.4s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 167B done
+#6 DONE 0.0s
+
+#7 [build 1/6] FROM docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca
+#7 resolve docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca done
+#7 DONE 0.0s
+
+#8 [runtime 1/4] FROM docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5
+#8 resolve docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5 done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 16.88kB done
+#9 DONE 0.0s
+
+#10 [build 2/6] WORKDIR /home/gradle/src
+#10 CACHED
+
+#11 [build 3/6] COPY --chown=gradle:gradle settings.gradle build.gradle gradle.properties ./
+#11 CACHED
+
+#12 [build 4/6] RUN gradle --no-daemon -q dependencies --configuration runtimeClasspath > /dev/null 2>&1 || true
+#12 CACHED
+
+#13 [build 5/6] COPY --chown=gradle:gradle src ./src
+#13 DONE 0.0s
+
+#14 [build 6/6] RUN gradle --no-daemon installDist
+#14 0.401 To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+#14 0.801 Daemon will be stopped at the end of the build 
+#14 2.901 > Task :checkKotlinGradlePluginConfigurationErrors
+#14 5.601 > Task :processResources
+#14 9.801 
+#14 9.801 > Task :compileKotlin
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:15:13 Variable 'tag' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:16:13 Variable 'author' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:17:13 Variable 'favorited' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:18:13 Variable 'limit' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:19:13 Variable 'offset' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:27:13 Variable 'limit' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:28:13 Variable 'offset' is never used
+#14 9.801 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/ArticleController.kt:53:13 Variable 'slug' is never used
+#14 9.802 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:31:13 Variable 'slug' is never used
+#14 9.802 w: file:///home/gradle/src/src/main/kotlin/io/realworld/app/web/controllers/CommentController.kt:32:13 Variable 'id' is never used
+#14 9.802 
+#14 9.802 > Task :compileJava NO-SOURCE
+#14 9.802 > Task :classes
+#14 9.901 > Task :jar
+#14 10.40 > Task :startScripts
+#14 10.48 > Task :installDist
+#14 10.48 
+#14 10.48 [Incubating] Problems report is available at: file:///home/gradle/src/build/reports/problems/problems-report.html
+#14 10.48 
+#14 10.48 Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+#14 10.48 
+#14 10.48 You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+#14 10.48 
+#14 10.48 For more on this, please refer to https://docs.gradle.org/8.14.5/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+#14 10.48 
+#14 10.48 BUILD SUCCESSFUL in 10s
+#14 10.48 6 actionable tasks: 6 executed
+#14 DONE 10.9s
+
+#15 [runtime 2/4] RUN groupadd --system app && useradd --system --gid app --home-dir /app app
+#15 CACHED
+
+#16 [runtime 3/4] WORKDIR /app
+#16 CACHED
+
+#17 [runtime 4/4] COPY --from=build --chown=app:app /home/gradle/src/build/install/api ./
+#17 DONE 0.0s
+
+#18 exporting to image
+#18 exporting layers
+#18 exporting layers 0.4s done
+#18 exporting manifest sha256:bef0e8d19c138a29a01b14489db09c12e347573603222999ac6779111ee0c451 done
+#18 exporting config sha256:ddcb4dd25c698facb2817d0d512f5f64e0d1362b8b7caa9908dd311ffb3f4a30 done
+#18 exporting attestation manifest sha256:27f4653959dccd55d7b18bb7aa0ef9b3b86dbf36431c2aeaa68662405748a6c8 done
+#18 exporting manifest list sha256:e791fcfdcf81eeb9df18d9a45a209ae150123f37b42f600738b07e661c36bbe3 done
+#18 naming to docker.io/library/ktor-realworld:latest done
+#18 unpacking to docker.io/library/ktor-realworld:latest 0.1s done
+#18 DONE 0.5s
+
+View build details: docker-desktop://dashboard/build/default/default/l81yptjguv7la0jotnjxbigx2
+up at http://localhost:18080
+  ok    register (200)
+  ok    register returned no password material
+  ok    login (200)
+  ok    get current user (200)
+  ok    wrong password -> 401 (401)
+  ok    blank password -> 422 (422)
+  ok    no token -> 401 (401)
+smoke: PASSED
+stopped
+EXIT_CODE=0
