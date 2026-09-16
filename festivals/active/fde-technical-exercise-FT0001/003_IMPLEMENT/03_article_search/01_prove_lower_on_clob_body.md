@@ -4,11 +4,13 @@ fest_id: 01_prove_lower_on_clob_body.md
 fest_name: prove_lower_on_clob_body
 fest_parent: 03_article_search
 fest_order: 1
-fest_status: pending
+fest_status: completed
 fest_autonomy: high
 fest_created: 2026-09-15T12:01:26.627195-06:00
+fest_updated: 2026-09-16T02:02:59.31848-06:00
 fest_tracking: true
 ---
+
 
 # Task: Prove LOWER works on the text body column
 
