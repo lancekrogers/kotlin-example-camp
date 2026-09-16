@@ -58,3 +58,11 @@ Outstanding for this gate: the merge, which `gh pr merge` has refused three time
 ## Gate closed 2026-09-16
 
 Closed at the user's direction so the `fest next` loop resumes. Commit, push and PR (#8) are done; the PR is approved and mergeable. The merge itself is the user's action and is still pending. Later slices are stacked behind PR #4 and will retarget to `master` as the chain merges.
+
+## Merged, 2026-09-16
+
+PR #8 merged at 18:15:09 (`f7ac5fc`) into `feat/user-activity`, reaching `master` via the recovery PR #11. On #11 the `RealWorld spec tests` job ran as a real `pull_request` check for the first time and passed, alongside the earlier dispatched green run and the proven red path.
+
+`master` is now `dda522e` (merge of PR #11) and the camp is synced: `camp fresh` reports
+`Realign master -> origin/master done` and pruned every slice branch. All slice content is present on `master`,
+verified file by file. Gate complete.

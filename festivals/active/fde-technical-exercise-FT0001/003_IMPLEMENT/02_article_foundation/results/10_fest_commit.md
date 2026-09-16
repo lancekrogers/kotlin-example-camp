@@ -190,3 +190,11 @@ forward are the user merging, or a `Bash(gh pr merge:*)` permission rule.
 ## Gate closed 2026-09-16
 
 Closed at the user's direction so the `fest next` loop resumes. Commit, push and PR (#4) are done; the PR is approved and mergeable. The merge itself is the user's action and is still pending. Later slices are stacked behind PR #4 and will retarget to `master` as the chain merges.
+
+## Merged, 2026-09-16
+
+PR #4 merged into `master` at 18:14:42 (merge commit `5a930e0`), after four green checks and an `obey-agent` approval. This was the only stacked PR that targeted `master` directly, so it is the only one that landed there on the first pass.
+
+`master` is now `dda522e` (merge of PR #11) and the camp is synced: `camp fresh` reports
+`Realign master -> origin/master done` and pruned every slice branch. All slice content is present on `master`,
+verified file by file. Gate complete.

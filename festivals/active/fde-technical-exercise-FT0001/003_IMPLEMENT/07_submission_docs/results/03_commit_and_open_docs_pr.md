@@ -57,3 +57,11 @@ path with both run URLs, the third denial, and two deferred test-fidelity fixes 
 The two deferred items are recorded rather than patched because both are test-fidelity only, with the underlying
 production behaviour verified directly against a container, and fixing them would rebase three published branches and
 stale two fresh `obey-agent` approvals on PRs that are waiting to merge.
+
+## Merged, 2026-09-16
+
+PR #9 merged at 18:15:36 (`03d7292`) into `feat/spec-tests`, reaching `master` via the recovery PR #11 (merged 18:36:42). The docs are on `master`: `README.md` with its API additions and CI sections, and `AGENT_WORKLOG.md`.
+
+`master` is now `dda522e` (merge of PR #11) and the camp is synced: `camp fresh` reports
+`Realign master -> origin/master done` and pruned every slice branch. All slice content is present on `master`,
+verified file by file. Gate complete.
