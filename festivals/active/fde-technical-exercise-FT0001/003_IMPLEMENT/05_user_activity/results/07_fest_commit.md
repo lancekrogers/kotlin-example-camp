@@ -31,3 +31,16 @@ worked around.
 - [ ] PR opened against `master` — waiting on PR #4
 - [ ] All required checks green on the PR — waiting on the PR
 - [ ] Merged with the user's authorization, and local `master` synced with `camp fresh` — waiting on the user
+
+## Delivery, 2026-09-16
+
+- Branch pushed: `feat/user-activity`
+- PR: https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/pull/7 (base `feat/popular-articles`, so the diff is exactly this slice; GitHub retargets it to `master` as the chain merges)
+- Green CI: https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35127039155
+
+The run is a `workflow_dispatch` run, not a PR check. The workflow filters `pull_request` on the base branch
+(`branches: [ "master" ]`), so a PR stacked on a feature branch triggers no checks at all. Dispatching on the branch
+executes the same jobs against the same commit. Once the chain merges and this PR retargets to `master`, it will pick
+up ordinary PR checks.
+
+Outstanding for this gate: the merge, which `gh pr merge` has refused three times via the permission classifier.

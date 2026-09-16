@@ -41,3 +41,16 @@ and run the red-path proof above on this slice's own PR.
 - [ ] All required checks green on the PR, including the new `RealWorld spec tests` job — waiting on the PR
 - [ ] Red-path proof recorded in `results/03_spec_job.md` — waiting on the PR
 - [ ] Merged with the user's authorization, and local `master` synced with `camp fresh` — waiting on the user
+
+## Delivery, 2026-09-16
+
+- Branch pushed: `feat/spec-tests`
+- PR: https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/pull/8 (base `feat/user-activity`, so the diff is exactly this slice; GitHub retargets it to `master` as the chain merges)
+- Green CI: https://github.com/lancekrogers/kotlin-ktor-realworld-example-app/actions/runs/35127041807
+
+The run is a `workflow_dispatch` run, not a PR check. The workflow filters `pull_request` on the base branch
+(`branches: [ "master" ]`), so a PR stacked on a feature branch triggers no checks at all. Dispatching on the branch
+executes the same jobs against the same commit. Once the chain merges and this PR retargets to `master`, it will pick
+up ordinary PR checks.
+
+Outstanding for this gate: the merge, which `gh pr merge` has refused three times via the permission classifier.
