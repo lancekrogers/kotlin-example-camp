@@ -1,0 +1,11 @@
+ArticleSearchRepositoryTest > percent sign in search term is literal FAILED
+    java.lang.AssertionError: expected:<1> but was:<2>
+        at io.realworld.app.domain.repository.ArticleSearchRepositoryTest.percent sign in search term is literal(ArticleSearchRepositoryTest.kt:101)
+ArticleSearchRepositoryTest > underscore in search term is literal FAILED
+    java.lang.AssertionError: expected:<0> but was:<1>
+        at io.realworld.app.domain.repository.ArticleSearchRepositoryTest.underscore in search term is literal(ArticleSearchRepositoryTest.kt:113)
+ArticleSearchTest > percent and underscore are literal FAILED
+    java.lang.AssertionError: expected:<1> but was:<2>
+        at io.realworld.app.web.controllers.ArticleSearchTest.percent and underscore are literal(ArticleSearchTest.kt:115)
+> Task :test FAILED
+BUILD FAILED in 30s

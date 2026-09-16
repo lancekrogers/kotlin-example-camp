@@ -4,11 +4,13 @@ fest_id: 02_discriminating_percent_test.md
 fest_name: discriminating percent test
 fest_parent: 08_test_fidelity_fixes
 fest_order: 2
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-16T12:59:38.409145-06:00
+fest_updated: 2026-09-16T13:11:05.954058-06:00
 fest_tracking: true
 ---
+
 
 # Task: Make the `%` literal-wildcard tests able to fail
 

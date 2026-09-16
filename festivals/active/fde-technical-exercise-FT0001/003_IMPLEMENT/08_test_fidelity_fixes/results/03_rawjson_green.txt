@@ -1,0 +1,8 @@
+> Task :testClasses UP-TO-DATE
+CommentCreateTest > postRawJson sends the object rather than a quoted string PASSED
+CommentCreateTest > raw response has no author secrets PASSED
+CommentCreateTest > blank body returns 422 PASSED
+CommentCreateTest > missing body returns 422 PASSED
+CommentCreateTest > unknown slug returns 404 PASSED
+CommentCreateTest > no token returns 401 PASSED
+BUILD SUCCESSFUL in 36s

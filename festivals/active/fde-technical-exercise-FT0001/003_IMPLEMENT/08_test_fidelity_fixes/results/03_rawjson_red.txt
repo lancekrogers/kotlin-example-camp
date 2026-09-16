@@ -1,0 +1,11 @@
+CommentCreateTest > postRawJson sends the object rather than a quoted string FAILED
+    java.lang.AssertionError: expected:<200> but was:<422>
+CommentCreateTest > raw response has no author secrets PASSED
+CommentCreateTest > blank body returns 422 PASSED
+CommentCreateTest > missing body returns 422 PASSED
+CommentCreateTest > unknown slug returns 404 PASSED
+CommentCreateTest > no token returns 401 PASSED
+> Task :test FAILED
+BUILD FAILED in 16s
+error: recipe `gradle` failed on line 16 with exit code 1
+error: recipe `only` failed on line 20 with exit code 1

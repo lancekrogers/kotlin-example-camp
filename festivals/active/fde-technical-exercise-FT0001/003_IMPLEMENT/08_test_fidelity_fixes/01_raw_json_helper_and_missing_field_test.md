@@ -4,11 +4,13 @@ fest_id: 01_raw_json_helper_and_missing_field_test.md
 fest_name: raw json helper and missing field test
 fest_parent: 08_test_fidelity_fixes
 fest_order: 1
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-16T12:59:38.405307-06:00
+fest_updated: 2026-09-16T13:07:52.404084-06:00
 fest_tracking: true
 ---
+
 
 # Task: Send raw JSON as raw JSON, and make the missing-field test real
 

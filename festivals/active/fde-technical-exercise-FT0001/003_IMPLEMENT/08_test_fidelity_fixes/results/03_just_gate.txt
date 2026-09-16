@@ -1,0 +1,3 @@
+  ok    token forged with the old committed key rejected (401)
+stopped
+=== gate: PASSED ===

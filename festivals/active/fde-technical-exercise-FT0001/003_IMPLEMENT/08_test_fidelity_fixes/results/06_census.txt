@@ -1,0 +1,2 @@
+  TOTAL ran=95 passed=95 failed=0 skipped=16
+  WARNING: 16 test(s) skipped. A green build does not mean the application works.

@@ -1,0 +1,24 @@
+ArticleSearchRepositoryTest > results ordered by createdAt descending PASSED
+ArticleSearchRepositoryTest > body only match is found PASSED
+ArticleSearchRepositoryTest > percent sign in search term is literal PASSED
+ArticleSearchRepositoryTest > title only match is found PASSED
+ArticleSearchRepositoryTest > results with equal createdAt ordered by id descending PASSED
+ArticleSearchRepositoryTest > search is case insensitive PASSED
+ArticleSearchRepositoryTest > paging returns page size and total match count PASSED
+ArticleSearchRepositoryTest > underscore in search term is literal PASSED
+ArticleSearchTest > no author secrets PASSED
+ArticleSearchTest > bad paging PASSED
+ArticleSearchTest > no match PASSED
+ArticleSearchTest > case insensitive PASSED
+ArticleSearchTest > anonymous request is public PASSED
+ArticleSearchTest > blank q PASSED
+ArticleSearchTest > limit below total PASSED
+ArticleSearchTest > missing q PASSED
+ArticleSearchTest > title only match PASSED
+ArticleSearchTest > body only match PASSED
+ArticleSearchTest > percent and underscore are literal PASSED
+BUILD SUCCESSFUL in 44s
+ArticleSearchRepositoryTest > percent sign in search term is literal PASSED
+ArticleSearchRepositoryTest > underscore in search term is literal PASSED
+ArticleSearchTest > percent and underscore are literal PASSED
+BUILD SUCCESSFUL in 42s

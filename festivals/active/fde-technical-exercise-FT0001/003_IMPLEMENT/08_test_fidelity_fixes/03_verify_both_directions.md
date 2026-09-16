@@ -4,11 +4,13 @@ fest_id: 03_verify_both_directions.md
 fest_name: verify both directions
 fest_parent: 08_test_fidelity_fixes
 fest_order: 3
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-16T12:59:38.412761-06:00
+fest_updated: 2026-09-16T13:17:47.635179-06:00
 fest_tracking: true
 ---
+
 
 # Task: Prove each changed test fails on broken behaviour before proving it passes
 

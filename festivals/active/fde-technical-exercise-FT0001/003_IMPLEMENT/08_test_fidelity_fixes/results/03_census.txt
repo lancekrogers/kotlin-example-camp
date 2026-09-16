@@ -1,0 +1,8 @@
+  ProfileStatsTest           ran=5   passed=5   failed=0   skipped=0
+  TagControllerTest          ran=1   passed=1   failed=0   skipped=0
+  UserControllerTest         ran=4   passed=4   failed=0   skipped=0
+  JsonAssertionsTest         ran=5   passed=5   failed=0   skipped=0
+
+  TOTAL ran=95 passed=95 failed=0 skipped=16
+
+  WARNING: 16 test(s) skipped. A green build does not mean the application works.
