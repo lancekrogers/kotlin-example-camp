@@ -1,10 +1,15 @@
-# amex
+# fde-technical-exercise
 
-amex interview
+Camp for a Forward Deployed Engineer (FDE) candidate technical exercise: take
+over an existing Kotlin/Ktor RealWorld example app, ship a small product
+improvement with tests and CI, and leave the repository in better shape than it
+was found. The work is planned and executed with the Festival methodology.
 
 ## Mission
 
-Amex interview
+Complete the FDE technical exercise end to end, using coding agents as part of
+the workflow, with a reviewable record of the plan, the changes, and the
+verification evidence.
 
 ## Directory Structure
 
