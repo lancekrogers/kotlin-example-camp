@@ -133,3 +133,6 @@
 {"ts":"2026-09-16T09:39:33.979475Z","event":"completed","task":"003_IMPLEMENT/05_user_activity/06_iterate.md"}
 {"ts":"2026-09-16T09:43:20.954418Z","event":"completed","task":"003_IMPLEMENT/06_spec_api_ci/01_pin_newman_and_guard_api_url.md"}
 {"ts":"2026-09-16T09:49:37.566296Z","event":"completed","task":"003_IMPLEMENT/06_spec_api_ci/02_expected_failures_manifest_and_compare_script.md"}
+{"ts":"2026-09-16T09:53:16.687885Z","event":"completed","task":"003_IMPLEMENT/06_spec_api_ci/03_spec_job_in_workflow.md"}
+{"ts":"2026-09-16T09:57:04.791044Z","event":"completed","task":"003_IMPLEMENT/06_spec_api_ci/05_review.md"}
+{"ts":"2026-09-16T10:00:28.743519Z","event":"completed","task":"003_IMPLEMENT/06_spec_api_ci/04_testing.md"}

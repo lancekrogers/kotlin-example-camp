@@ -1,0 +1,3 @@
+.gitignore:47:newman-report.json	newman-report.json
+.gitignore:48:spec-api/newman-report.json	spec-api/newman-report.json
+EXIT_CODE=0

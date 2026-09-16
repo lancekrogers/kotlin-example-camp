@@ -1,0 +1,2 @@
+ERROR: Collection has 30 requests but report has 31 executions. The report does not correspond to the collection.
+EXIT_CODE=2

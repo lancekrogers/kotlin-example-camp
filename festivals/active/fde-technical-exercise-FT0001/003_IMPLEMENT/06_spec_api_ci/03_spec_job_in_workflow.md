@@ -4,11 +4,13 @@ fest_id: 03_spec_job_in_workflow.md
 fest_name: spec_job_in_workflow
 fest_parent: 06_spec_api_ci
 fest_order: 3
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:05:06.148737-06:00
+fest_updated: 2026-09-16T03:53:16.687997-06:00
 fest_tracking: true
 ---
+
 
 # Task: Add the spec-test job to CI
 

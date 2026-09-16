@@ -1,0 +1,81 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 1.40kB done
+#1 DONE 0.0s
+
+#2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+#2 DONE 0.2s
+
+#3 docker-image://docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32
+#3 resolve docker.io/docker/dockerfile:1@sha256:ecfaec9ed6d810b56388c508f4121597bfbba70d41a6dfeee4d8cad5f295fc32 0.0s done
+#3 CACHED
+
+#4 [internal] load metadata for docker.io/library/gradle:8.14-jdk17
+#4 DONE 0.2s
+
+#5 [internal] load metadata for docker.io/library/eclipse-temurin:17-jre
+#5 DONE 0.2s
+
+#6 [internal] load .dockerignore
+#6 transferring context: 167B done
+#6 DONE 0.0s
+
+#7 [build 1/6] FROM docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca
+#7 resolve docker.io/library/gradle:8.14-jdk17@sha256:6d84b92e80ed7ab40fe02fd0fa5887a7a9ea4b3c4fbe88094234f81e38f574ca done
+#7 DONE 0.0s
+
+#8 [runtime 1/4] FROM docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5
+#8 resolve docker.io/library/eclipse-temurin:17-jre@sha256:23d7f52652b6b65b57eab85df9631741807929a68ff7e37c27104de6ac6690d5 0.0s done
+#8 DONE 0.0s
+
+#9 [internal] load build context
+#9 transferring context: 6.13kB 0.0s done
+#9 DONE 0.0s
+
+#10 [build 4/6] RUN gradle --no-daemon -q dependencies --configuration runtimeClasspath > /dev/null 2>&1 || true
+#10 CACHED
+
+#11 [build 6/6] RUN gradle --no-daemon installDist
+#11 CACHED
+
+#12 [build 5/6] COPY --chown=gradle:gradle src ./src
+#12 CACHED
+
+#13 [runtime 2/4] RUN groupadd --system app && useradd --system --gid app --home-dir /app app
+#13 CACHED
+
+#14 [build 3/6] COPY --chown=gradle:gradle settings.gradle build.gradle gradle.properties ./
+#14 CACHED
+
+#15 [build 2/6] WORKDIR /home/gradle/src
+#15 CACHED
+
+#16 [runtime 3/4] WORKDIR /app
+#16 CACHED
+
+#17 [runtime 4/4] COPY --from=build --chown=app:app /home/gradle/src/build/install/api ./
+#17 CACHED
+
+#18 exporting to image
+#18 exporting layers done
+#18 exporting manifest sha256:30301e4cf9946f0c9a30366ee498dbfb3a859e7c057a81c2343678517ba5aae1 done
+#18 exporting config sha256:2388ec8ea742009de29f17e0268669ef236a60bbc774c89f4ee297b782d84737 done
+#18 exporting attestation manifest sha256:4abed5871925e65edddb9e2590ee50e077c21df7d8284e67370a8c641f515702 done
+#18 exporting manifest list sha256:fd9709b7fbb375755a962830d094faa6c6b6d0239fd489372c0ebd07eda24a03 done
+#18 naming to docker.io/library/ktor-realworld:latest done
+#18 unpacking to docker.io/library/ktor-realworld:latest done
+#18 DONE 0.0s
+
+View build details: docker-desktop://dashboard/build/default/default/2olg7agwwvhypl1rab2npndyl
+up at http://localhost:18080
+  ok    register (200)
+  ok    register returned no password material
+  ok    login (200)
+  ok    get current user (200)
+  ok    wrong password -> 401 (401)
+  ok    blank password -> 422 (422)
+  ok    no token -> 401 (401)
+smoke: PASSED
+stopped
+EXIT_CODE=0

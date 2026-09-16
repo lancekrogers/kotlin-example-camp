@@ -1,0 +1,10 @@
+  ok    no jcenter()
+  ok    no mavenLocal()
+  ok    all versions pinned
+  ok    Gradle distribution checksum pinned
+  ok    no hardcoded credentials in src/main
+  ok    wrapper jar contains only stock Gradle classes
+  ok    wrapper jar hardcodes no download URLs
+  ok    sha256 7d3a4ac4de1c32b59bc6a4eb8ecb8e612ccd0cf1ae1e99f66902da64df296172
+static audit: PASSED
+EXIT_CODE=0

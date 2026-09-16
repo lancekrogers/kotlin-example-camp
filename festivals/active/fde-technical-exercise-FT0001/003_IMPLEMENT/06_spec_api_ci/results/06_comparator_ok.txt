@@ -1,0 +1,2 @@
+18 failed, 18 expected
+EXIT_CODE=0
