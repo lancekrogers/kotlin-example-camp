@@ -4,11 +4,13 @@ fest_id: 02_favorite_endpoints_and_real_counts.md
 fest_name: favorite_endpoints_and_real_counts
 fest_parent: 04_popular_articles
 fest_order: 2
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.749732-06:00
+fest_updated: 2026-09-16T02:43:39.163465-06:00
 fest_tracking: true
 ---
+
 
 # Task: Wire the favorite and unfavorite endpoints
 
