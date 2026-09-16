@@ -4,11 +4,13 @@ fest_id: 01_pin_newman_and_guard_api_url.md
 fest_name: pin_newman_and_guard_api_url
 fest_parent: 06_spec_api_ci
 fest_order: 1
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:05:06.106005-06:00
+fest_updated: 2026-09-16T03:43:20.954528-06:00
 fest_tracking: true
 ---
+
 
 # Task: Pin newman and require an explicit APIURL
 
