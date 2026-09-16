@@ -4,11 +4,13 @@ fest_id: 03_popular_query_service_and_route.md
 fest_name: popular_query_service_and_route
 fest_parent: 04_popular_articles
 fest_order: 3
-fest_status: pending
+fest_status: completed
 fest_autonomy: medium
 fest_created: 2026-09-15T12:01:26.769687-06:00
+fest_updated: 2026-09-16T02:48:37.361656-06:00
 fest_tracking: true
 ---
+
 
 # Task: Add GET /articles/feed/popular
 
