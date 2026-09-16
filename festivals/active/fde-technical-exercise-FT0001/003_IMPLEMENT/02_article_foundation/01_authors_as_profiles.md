@@ -4,11 +4,13 @@ fest_id: 01_authors_as_profiles.md
 fest_name: authors_as_profiles
 fest_parent: 02_article_foundation
 fest_order: 1
-fest_status: pending
+fest_status: completed
 fest_autonomy: high
 fest_created: 2026-09-15T12:01:26.506093-06:00
+fest_updated: 2026-09-15T15:08:04.816106-06:00
 fest_tracking: true
 ---
+
 
 # Task: Make article and comment authors Profiles
 

@@ -47,7 +47,26 @@ $ gh pr view 3 --repo $R --json url,state,isDraft,mergeable,reviewDecision
 
 On a hosted runner, the suite runs 25 tests: the probe run's 26 minus the deleted probe.
 
-## Merge: pending the user
+## Merge: done by the user
+
+```text
+$ gh pr view 3 --repo $R --json state,mergedAt,mergeCommit,mergedBy
+{"mergeCommit":"a5b25c782c7923b4b4499436b51c2f8d1268be51","mergedAt":"2026-09-16T06:32:52Z","mergedBy":"lancekrogers","state":"MERGED"}
+$ camp fresh   # in the project
+  ── Sync master <- origin/master       updated 2 commit(s)
+  ── Prune merged branches           deleted: ci/jdk-matrix
+$ git log --oneline -3 master
+a5b25c7 Merge pull request #3 from lancekrogers/ci/jdk-matrix
+9752fea [amex:bb8421b0-FE-FT0001-PH-003-SQ-01] ci: JDK 17/21 matrix with pinned actions and JUnit annotations
+bf1435e Merge pull request #1 from lancekrogers/security/audit-remediation
+```
+
+`master` now carries the JDK 17/21 check, so every later slice's PR is gated by it. `feat/article-foundation`
+branched from `9752fea`, which is in `master`'s history through this merge commit, so no rebase is needed.
+
+### How the merge was reached
+
+
 
 At about 21:05Z the orchestrator tried `gh pr merge 3 --repo $R --merge --delete-branch`, after checking that run
 35023274212 was `completed success` on the PR's head SHA. Claude Code's auto-mode permission classifier denied the command
